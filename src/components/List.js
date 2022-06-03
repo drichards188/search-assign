@@ -5,8 +5,8 @@ function List(props) {
 
     //todo insert Algolia api key and application id into these variables
     //*********************************************************
-    const apiKey = "INSERT_SECRET_HERE"
-    const applicationId = "INSERT_SECRET_HERE"
+    const apiKey = "INSERT_KEY_HERE"
+    const applicationId = "INSERT_ID_HERE"
     //*********************************************************
 
     //defining hook data for persistence, cleanliness and reuse
