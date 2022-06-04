@@ -19,6 +19,7 @@ h1 {
 ul li {
     font-size: 20px;
     list-style-type: none;
+    cursor: default;
 }
 
 /* width */

@@ -63,7 +63,7 @@ function SearchBar() {
                     variant="outlined"
                     fullWidth
                     autoFocus
-                    label="Search"
+                    label="Search | Sku, Name, Id, Tag, Category"
                     placeholder="Topic Search"
                 />
                 <Button onClick={handleMacroInput}>Search</Button>
