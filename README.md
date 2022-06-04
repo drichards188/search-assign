@@ -10,7 +10,9 @@ will quickly adhere to the teams coding standards, technologies and methodologie
 ## The App
 
 The code creates a React template app that enables the user to search the provided endpoint. The focused search bar sends the
-actual query to Algolia. The second search bar refines the results to the specific item while typing. Proof of concept testing
+actual query to Algolia. The second search bar refines the results to the specific item while typing. Clicking on an item
+returns the objectID. Should be able to use that to pull details and display an item pop up. The pop up
+is a work in progress. Proof of concept testing
 elements with Jest and React-Testing can be run with `npm test`
 
 ## Potential Future Elements

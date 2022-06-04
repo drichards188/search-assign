@@ -1,14 +1,13 @@
 import {React, useEffect, useState} from 'react'
 import "./SearchBar.css"
 
+//todo insert Algolia api key and application id into these variables
+//*********************************************************
+const apiKey = "INSERT_SECRET_HERE"
+const applicationId = "INSERT_SECRET_HERE"
+//*********************************************************
+
 function List(props) {
-
-    //todo insert Algolia api key and application id into these variables
-    //*********************************************************
-    const apiKey = "INSERT_KEY_HERE"
-    const applicationId = "INSERT_ID_HERE"
-    //*********************************************************
-
     //defining hook data for persistence, cleanliness and reuse
     const [hitPerPage, setHitPerPage] = useState(50)
     const [keyword, setKeyword] = useState("")
@@ -26,7 +25,7 @@ function List(props) {
     if (keyword !== props.keyword) {
         setKeyword(props.keyword)
     }
-    if (page != props.page) {
+    if (page !== props.page) {
         setPage(props.page)
     }
 
@@ -82,10 +81,18 @@ function List(props) {
     return (
         <ul>
             {filteredData.map((item) => (
-                <li key={item.id}>{item.text}</li>
+                <li key={item.id} id={item.prodId} onClick={handleItemClick.bind(this)}>{item.text}</li>
             ))}
         </ul>
     )
+}
+
+function handleItemClick(e) {
+    let objectId = e.target.id;
+
+    alert("objectID to query details: " + objectId);
+
+
 }
 
 //this helper function computes things such as the max pages for a query and maps item data for display
@@ -98,7 +105,7 @@ function processApiData(data, hitPerPage, setPageMax) {
 
     data = data["hits"]
     for (let i = 0; i < data.length; i++) {
-        let itemObj = {"id":data[i]["Sku"], "text":data[i]["Name"]}
+        let itemObj = {"id":data[i]["Sku"], "text":data[i]["Name"], "prodId":data[i]["objectID"]}
         cleanData.push(itemObj)
     }
     return cleanData
