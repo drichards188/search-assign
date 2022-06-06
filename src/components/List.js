@@ -111,4 +111,12 @@ function processApiData(data, hitPerPage, setPageMax) {
     return cleanData
 }
 
+const handleError = response => {
+    if (!response.ok) {
+        throw Error(response.statusText);
+    } else {
+        return response.json();
+    }
+};
+
 export default List
