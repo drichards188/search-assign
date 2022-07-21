@@ -1,7 +1,6 @@
 # Hello Dev Team
 
-This has been an interesting assignment with an incredible amount of future depth. For context, I have spent the majority
-of my experience in the backend. My interview prep was primarily data structures and algorithms. As such I hope to emphasize 
+This has been an interesting assignment with an incredible amount of future depth. I hope to emphasize 
 my quick context switch and ability to quickly experiment, learn and produce, rather than focusing on the perfectness of the code.
 
 I hope to have the opportunity to continue to learn and grow with you. I hope my positive growth mindset indicates that I
